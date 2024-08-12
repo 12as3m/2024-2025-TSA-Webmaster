@@ -1,12 +1,19 @@
 ﻿//banner parallax
 window.addEventListener("scroll", function () {
     const distance = window.scrollY;
-    document.querySelector("header").style.transform = `translateY(${distance * 0.7}px)`;
-    document.querySelector("header").style.filter = `blur(${distance * 0.03}px)`;
 
-    const maxScroll = 1000;
-    const opacity = Math.max(0, 1 - distance / maxScroll);
-    document.querySelector("header").style.opacity = opacity;
+    // Convert vh to pixels
+    const maxScrollVh = 100; // Set the max scroll in vh units (e.g., 50vh)
+    const maxScrollPx = (window.innerHeight * maxScrollVh) / 100;
+
+    // Apply transformations and styles
+    const header = document.querySelector("header");
+    header.style.transform = `translateY(${distance * 0.7}px)`;
+    header.style.filter = `blur(${distance * 0.03}px)`;
+
+    // Calculate opacity based on scroll distance
+    const opacity = Math.max(0, 1 - distance / maxScrollPx);
+    header.style.opacity = opacity;
 });
 
 //giant container box shadow
@@ -84,3 +91,6 @@ document.querySelectorAll('.perspective-card-small').forEach(card => {
 //        card.style.transform = 'rotateY(0) rotateX(0)'; // Reset transform on mouse leave
 //    };
 //});
+
+
+//carousel stuff

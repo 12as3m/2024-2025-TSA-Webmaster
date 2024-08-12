@@ -35,6 +35,7 @@ html {
 body {
     font-family: var(--body-font) !important;
     background-color: var(--opaque-bg) !important;
+    color: var(--text-color-solid);
 }
 
 .giant-container {
@@ -111,6 +112,8 @@ header {
     text-align: center;
     background-image: url(https://images.unsplash.com/photo-1551970634-747846a548cb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
     color: white;
@@ -123,9 +126,10 @@ header {
 }
 
 .banner_title {
-    font-size: 14rem;
+    font-size: calc(7rem + 4.5vw);
     font-family: var(--header-font);
     text-shadow: var(--title-text-shad);
+    overflow-wrap: break-word;
 }
 
 .banner_subtitle {
@@ -133,10 +137,12 @@ header {
 }
 
 
+
+
 /*FOOTER*/
 
 .footer {
-    background: var(--opaque-bg-dark);
+    background: var(--opaque-bg);
     color: var(--text-color-solid-muted);
 }
 
@@ -279,20 +285,31 @@ header {
     width: 100%;
 }
 
-.big-card-layout-image-1,
+/*.big-card-layout-image-1,
 .big-card-layout-image-2,
 .big-card-layout-image-3,
 .big-card-layout-image-4 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}*/
+
+.big-card-layout-image-1,
+.big-card-layout-image-2,
+.big-card-layout-image-3 {
+    margin-bottom: 3rem;
 }
+
 
 .big-card-layout-image-1::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image: url(https://images.unsplash.com/photo-1603328206297-d59f3d0312c0?q=80&w=1830&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    mask-image: radial-gradient(red, transparent 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    mask-image: radial-gradient(red, transparent 70%);
     filter: blur(8px);
 }
 
@@ -301,7 +318,11 @@ header {
     position: absolute;
     inset: 0;
     background-image: url(https://images.unsplash.com/photo-1629825974318-5bbdf3cb4efe?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    mask-image: radial-gradient(red, transparent 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    mask-image: radial-gradient(red, transparent 70%);
     filter: blur(8px);
 }
 
@@ -310,7 +331,11 @@ header {
     position: absolute;
     inset: 0;
     background-image: url(https://images.unsplash.com/photo-1656951329324-f349a97c908d?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    mask-image: radial-gradient(red, transparent 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    mask-image: radial-gradient(red, transparent 70%);
     filter: blur(8px);
 }
 
@@ -319,7 +344,11 @@ header {
     position: absolute;
     inset: 0;
     background-image: url(https://images.unsplash.com/photo-1655744434956-d5487b9a40aa?q=80&w=1766&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    mask-image: radial-gradient(red, transparent 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    mask-image: radial-gradient(red, transparent 70%);
     filter: blur(8px);
 }
 
@@ -383,6 +412,62 @@ header {
     font-family: Bungee;
 }*/
 
+/*WIDE CAROUSEL LAYOUT*/
+
+.carousel {
+    border-radius: var(--glassy-border-radius);
+    overflow: hidden;
+    box-shadow: var(--elev-shad_glassy);
+}
+
+.wide-carousel-layout .carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+/*CAROUSEL WITH TEXT LAYOUT*/
+
+.carousel-with-text-layout .carousel {
+    height: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-with-text-layout .carousel-item {
+    height: 600px;
+}
+
+.carousel-with-text-layout {
+    color: var(--text-color-solid);
+}
+
+.little-line {
+    width: 40px;
+    height: 8px;
+    border-radius: 10px;
+    background: var(--text-color-solid-very-muted);
+    margin-bottom: 0.5rem;
+}
+
+.ball {
+    width: 15px;
+    height: 15px;
+    border: 3px solid var(--text-color-solid-very-muted);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    margin-right: 3px;
+}
+
+@media (min-width: 992px) {
+    .carousel-with-text-layout .carousel {
+        margin-bottom: 0;
+    }
+}
 
 /*REFERENCE LAYOUT*/
 

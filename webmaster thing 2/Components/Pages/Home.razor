@@ -7,6 +7,55 @@
     <p class="banner_subtitle">This Is A Subtitle</p>
 </header>
 
+@*
+
+<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?fit=crop&w=1964&q=100" class="d-block w-100 c-img" alt="Slide 1">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="mt-5 fs-3 text-uppercase">Discover the hidden world</p>
+          <h1 class="display-1 fw-bolder text-capitalize">The Aurora Tours</h1>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book a tour</button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img" alt="Slide 2">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="text-uppercase fs-3 mt-5">The season has arrived</p>
+          <p class="display-1 fw-bolder text-capitalize">3 available tours</p>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+            data-bs-target="#booking-modal">Book a tour</button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img" alt="Slide 3">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="text-uppercase fs-3 mt-5">Destination activities</p>
+          <p class="display-1 fw-bolder text-capitalize">Go glacier hiking</p>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+            data-bs-target="#booking-modal">Book a tour</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+*@
+
 <div class="container-fluid giant-container pb-5">
 
     @*DISPLAY HEADER LAYOUT*@
@@ -277,6 +326,103 @@
         </div>
     </div>*@
 
+    @*WIDE CAROUSEL LAYOUT*@
+    <div class="wide-carousel-layout container-fluid mb-5">
+        <div class="container-sm">
+            <div id="wide-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#wide-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#wide-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#wide-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1572587356426-b33bf42f999b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1">
+                        <div class="carousel-caption mb-2">
+                            <h5>This Is A Header</h5>
+                            <p>This is some description.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1482685945432-29a7abf2f466?q=80&w=1789&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+                        <div class="carousel-caption mb-2">
+                            <h5>This Is A Header</h5>
+                            <p>This is some description.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3">
+                        <div class="carousel-caption mb-2">
+                            <h5>This Is A Header</h5>
+                            <p>This is some description.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#wide-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#wide-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    @*CAROUSEL WITH TEXT LAYOUT*@
+    <div class="carousel-with-text-layout container-fluid mb-5">
+        <div class="container-sm">
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div id="carousel-with-text" class="carousel slide carousel-fade" data-interval="false">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-with-text" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel-with-text" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel-with-text" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1603329470128-074eaf2939e7?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1655409703097-78a27bed8b38?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1657667779190-8e90af2d9f3f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-with-text" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-with-text" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h2>
+                        This Is A Title
+                    </h2>
+                    <div class="little-line"></div>
+                    @* <div class="d-flex">
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                        <div class="ball"></div>
+                    </div> *@
+                    <p>
+                        Lorem ipsum odor amet, consectetuer adipiscing elit. Hac etiam suscipit finibus elementum diam aliquet. Non pellentesque aliquet erat molestie hac laoreet. Blandit aenean diam taciti neque gravida aenean ligula venenatis. Fusce euismod rhoncus curae nostra rutrum fringilla erat aptent. Placerat tortor massa tempus magnis per eu porta auctor. Consectetur per sit, pulvinar sed ac sollicitudin. Luctus risus semper diam lacinia posuere elit iaculis himenaeos imperdiet.
+                    </p>
+                    <p>
+                        Arcu vehicula senectus eleifend ante suspendisse curabitur amet ac. Sodales leo hac quis, velit lorem sodales. Hendrerit molestie sagittis justo habitant massa gravida. Venenatis tempor congue duis convallis sagittis. Anunc purus magnis sit nec dictum conubia. Feugiat risus egestas ex fames praesent montes. Facilisi iaculis porta sociosqu nullam mollis mollis. Interdum massa non curabitur libero pellentesque placerat sem. Fames metus posuere, integer fermentum commodo eget class.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     @*REFERENCE LAYOUT (LEFT)*@
     <div class="reference-layout container-fluid mb-5">
         <div class="container-sm">
@@ -293,7 +439,7 @@
                         https://dsfasdfasdfalsdjfasfd.com
                     </p>
                     <p>
-                        This is a description of the reference's use. Itaaaaaaaaaaaaaaaaaaaaaaa was asdf asdfasdf sdfarfsd erfsd vsdf vdfv sdfgs.
+                        Description if needed. Tempor sagittis commodo hac gravida per mi. Habitasse scelerisque eu elementum taciti ullamcorper purus dolor arcu. Diam praesent hac justo vel ornare ornare. Curae rhoncus arcu platea laoreet orci curae tempor. Id curabitur ipsum dictum nisl litora nulla proin. Potenti fermentum lectus nisi commodo felis habitasse. In hendrerit risus cras auctor luctus. Augue class eu; tortor in aliquam adipiscing magnis. Tristique elementum accumsan leo ad interdum pretium tortor libero.
                     </p>
                 </div>
             </div>
@@ -315,7 +461,7 @@
                         https://dsfasdfasdfalsdjfasfd.com
                     </p>
                     <p>
-                        This is a description of the reference's use. It was asdf asdfasdf sdfarfsd erfsd vsdf vdfv sdfgs.
+                        Description if needed. Duis sagittis lacus turpis etiam dictum efficitur donec. Gravida ex suscipit velit fusce sit ligula dolor. Amagna montes in aliquet torquent malesuada aenean ultricies. Nisl tristique tristique mattis platea mus; lorem phasellus. Mattis dictum ipsum curabitur fusce dapibus integer leo ligula potenti. Donec dictum pulvinar elit integer neque pretium. Purus ultricies rutrum pulvinar natoque, velit maecenas. Vitae luctus imperdiet luctus consectetur, dapibus vehicula. Sociosqu nec class; enim lectus egestas eget.
                     </p>
                 </div>
                 <div class="line"></div>
