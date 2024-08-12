@@ -7,12 +7,325 @@
     <p class="banner_subtitle">This Is A Subtitle</p>
 </header>
 
-<div style="background-color: red; height: 500px;" class="container-fluid">100% wide until small breakpoint</div>
-<div style="background-color: orange; height: 500px;" class="container-fluid">100% wide until medium breakpoint</div>
-<div style="background-color: yellow; height: 500px;" class="container-fluid">100% wide until large breakpoint</div>
-<div style="background-color: green; height: 500px;" class="container-fluid">100% wide until extra large breakpoint</div>
-<div style="background-color: blue; height: 500px;" class="container-fluid">100% wide until extra extra large breakpoint</div>
+<div class="container-fluid giant-container pb-5">
 
+    @*DISPLAY HEADER LAYOUT*@
+    <div class="display-header-layout container-fluid mb-5">
+        <div class="container-sm text-center">
+            <h1 class="display-1">This Is A Header</h1>
+        </div>
+    </div>
+
+
+    
+    
+    @*LINE & PARAGRAPH LAYOUT (LEFT)*@
+    <div class="quote-layout container-fluid mb-5">
+        <div class="container-sm">
+            <div class="d-flex quote-layout-container" style="gap: 20px;">
+                <div class="line"></div>
+                <div class="quote-text-div">
+                    <h3>
+                        This Is A Title
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Interdum dictumst tempus vel nisl pellentesque nulla at. Torquent himenaeos nisi ornare phasellus aliquet pulvinar suspendisse. Commodo leo phasellus ac sociosqu enim nostra at. Potenti vulputate aliquam felis eleifend, gravida curabitur venenatis parturient a. Eros phasellus dis mi hac purus ornare cubilia. Suspendisse aptent ridiculus phasellus velit porttitor cubilia. Integer vehicula ligula massa ante habitant inceptos. Condimentum morbi aliquam erat vivamus nisi porttitor est maecenas. Eget risus nascetur suscipit nascetur velit sollicitudin finibus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*LINE & PARAGRAPH LAYOUT (RIGHT)*@
+    <div class="quote-layout container-fluid mb-5">
+        <div class="container-sm">
+            <div class="d-flex quote-layout-container" style="gap: 20px; justify-content: flex-end;">
+                <div class="quote-text-div text-end">
+                    <h3>
+                        This Is A Title
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Ornare euismod torquent inceptos porttitor sit proin. Habitasse per finibus dui suspendisse dapibus pellentesque, ullamcorper consectetur fermentum. Adipiscing vivamus phasellus vel sagittis; aliquam platea. Tempus ullamcorper dolor nisl porta metus magna suscipit tempus tempus. Nibh eu tempus gravida massa id congue vulputate. Interdum posuere dictum integer arcu cras. Fusce pellentesque donec at tristique, lacus feugiat metus at. Mus aptent dapibus, pharetra molestie urna dignissim.
+                    </p>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @*SMALL CARD LAYOUT*@
+    <div class="small-card-layout container-fluid">
+        <div class="container-sm">
+            <div class="row perspective-container">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center perspective-card-small hidden" id="card1">
+                        <div class="card-body">
+                            <div class="card-icon">💡</div>
+                            <h5 class="card-title">Card Title 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center perspective-card-small hidden" id="card2">
+                        <div class="card-body">
+                            <div class="card-icon">🔧</div>
+                            <h5 class="card-title">Card Title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center perspective-card-small hidden" id="card3">
+                        <div class="card-body">
+                            <div class="card-icon">📈</div>
+                            <h5 class="card-title">Card Title 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center perspective-card-small hidden" id="card4">
+                        <div class="card-body">
+                            <div class="card-icon">🚀</div>
+                            <h5 class="card-title">Card Title 4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*IMG LAYOUT*@
+    <div class="img-layout container-fluid mb-5">
+        <div class="container-sm text-center">
+            <img src="https://www.svgrepo.com/show/476993/forest.svg" width="400px" height="400px" alt="this is some alt text" />
+        </div>
+    </div>
+
+    @*BIG CARD LAYOUT*@
+    @* <div class="big-card-layout container-fluid mb-5">
+        <div class="container-sm">
+            <div class="row perspective-container">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card text-center perspective-card" id="card1">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1603328206297-d59f3d0312c0?q=80&w=1830&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title 1</h5>
+                            <p class="card-text">
+                                Lorem ipsum odor amet, consectetuer adipiscing elit. Augue velit convallis aliquam nascetur nunc montes. Suscipit aliquet ac turpis phasellus nullam molestie integer. Vitae quisque praesent semper porta phasellus velit. Natoque bibendum dictum nam hac pharetra mus quam tempus in. Per mus iaculis; ipsum in in eget vel fermentum. Elit vel tincidunt efficitur nascetur habitant ultricies. Justo dignissim libero proin cubilia sem condimentum sed?
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" >Visit!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card text-center perspective-card" id="card2">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1656951329324-f349a97c908d?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title 2</h5>
+                            <p class="card-text">
+                                Cras sollicitudin natoque ac porta eros suspendisse est. Laoreet rhoncus viverra senectus molestie risus justo. Consectetur quam platea montes sit cubilia. Finibus integer venenatis rhoncus dictum; consequat ipsum. Sagittis cursus ullamcorper donec nisi ad pretium sed congue. Hac sapien habitasse platea; posuere eget placerat. Magnis magna torquent metus donec eleifend congue metus consectetur netus.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" >Visit!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card text-center perspective-card" id="card3">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1629825974318-5bbdf3cb4efe?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title 3</h5>
+                            <p class="card-text">
+                                Tempor tristique maximus leo, nullam mauris ultrices laoreet tempus semper. Faucibus vulputate pellentesque rutrum praesent condimentum euismod accumsan. Faucibus viverra habitasse efficitur dictum phasellus nostra habitasse! Nascetur ridiculus lectus vitae volutpat maximus adipiscing feugiat felis. Sed netus mus velit class tristique bibendum. Ad congue aptent faucibus porta dis. Dolor facilisis himenaeos rutrum nisi purus penatibus. Id quisque lectus; quisque hendrerit vulputate iaculis parturient etiam. Molestie in aptent sem quam pharetra.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" >Visit!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card text-center perspective-card" id="card4">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1655744434956-d5487b9a40aa?q=80&w=1766&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title 4</h5>
+                            <p class="card-text">
+                                Inceptos ante cursus penatibus tellus, litora taciti turpis feugiat. Vestibulum sit nunc rutrum imperdiet nec in. Auctor nisi viverra dis potenti in consectetur sodales netus taciti. Cras gravida hac sollicitudin convallis sociosqu varius gravida faucibus. Bibendum morbi metus morbi hendrerit tincidunt fames sem dolor. Ante accumsan accumsan, odio nullam amet ac mus! Lacinia vitae sagittis eros parturient lobortis tristique? Per tellus malesuada himenaeos finibus malesuada. Maecenas lacus luctus aliquet semper facilisi nostra ac. Quisque duis tristique habitant vestibulum tellus sem non.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" >Visit!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> *@
+
+    @*BIG CARD LAYOUT*@
+    <div class="big-card-layout mb-5">
+        <div style="position: relative;" class="big-card-layout-image-1">
+            <div class="individual-big-card container-sm">
+                <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 card text-center perspective-card" id="card1">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1603328206297-d59f3d0312c0?q=80&w=1830&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 1</h5>
+                        <p class="card-text">
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Augue velit convallis aliquam nascetur nunc montes. Suscipit aliquet ac turpis phasellus nullam molestie integer. Vitae quisque praesent semper porta phasellus velit. Natoque bibendum dictum nam hac pharetra mus quam tempus in. Per mus iaculis; ipsum in in eget vel fermentum. Elit vel tincidunt efficitur nascetur habitant ultricies. Justo dignissim libero proin cubilia sem condimentum sed?
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">See it here!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative;" class="big-card-layout-image-2">
+            <div class="individual-big-card container-sm">
+                <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 offset-lg-6 offset-xl-7 offset-xxl-8 card text-center perspective-card" id="card1">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1629825974318-5bbdf3cb4efe?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 1</h5>
+                        <p class="card-text">
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Augue velit convallis aliquam nascetur nunc montes. Suscipit aliquet ac turpis phasellus nullam molestie integer. Vitae quisque praesent semper porta phasellus velit. Natoque bibendum dictum nam hac pharetra mus quam tempus in. Per mus iaculis; ipsum in in eget vel fermentum. Elit vel tincidunt efficitur nascetur habitant ultricies. Justo dignissim libero proin cubilia sem condimentum sed?
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">See it here!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative;" class="big-card-layout-image-3">
+            <div class="individual-big-card container-sm">
+                <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 card text-center perspective-card" id="card1">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1656951329324-f349a97c908d?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 1</h5>
+                        <p class="card-text">
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Augue velit convallis aliquam nascetur nunc montes. Suscipit aliquet ac turpis phasellus nullam molestie integer. Vitae quisque praesent semper porta phasellus velit. Natoque bibendum dictum nam hac pharetra mus quam tempus in. Per mus iaculis; ipsum in in eget vel fermentum. Elit vel tincidunt efficitur nascetur habitant ultricies. Justo dignissim libero proin cubilia sem condimentum sed?
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">See it here!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative;" class="big-card-layout-image-4">
+            <div class="individual-big-card container-sm">
+                <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 offset-lg-6 offset-xl-7 offset-xxl-8 card text-center perspective-card" id="card1">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1655744434956-d5487b9a40aa?q=80&w=1766&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 1</h5>
+                        <p class="card-text">
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Augue velit convallis aliquam nascetur nunc montes. Suscipit aliquet ac turpis phasellus nullam molestie integer. Vitae quisque praesent semper porta phasellus velit. Natoque bibendum dictum nam hac pharetra mus quam tempus in. Per mus iaculis; ipsum in in eget vel fermentum. Elit vel tincidunt efficitur nascetur habitant ultricies. Justo dignissim libero proin cubilia sem condimentum sed?
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">See it here!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 500px;" class="container-fluid">
+
+    </div>
+
+    @*IMG & TEXT LAYOUT*@
+    @* <div class="img-and-text-layout container-fluid">
+        <div class="container-sm">
+            <div class="d-flex">
+                <img class="col-3 card-img-left me-4" src="https://www.svgrepo.com/show/317386/forest-burn.svg" alt="this is alt text">
+                <div class="card py-3 px-3">
+                    <h2>
+                        This Is A Title
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>   *@
+
+    @*BIG NUMBERED LIST LAYOUT
+    <div class="big-numbered-list-layout container-fluid mb-5">
+        <div class="container-sm" style="position: relative;">
+            
+            <div class="giant-number">1</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+        </div>
+    </div>*@
+
+    @*REFERENCE LAYOUT (LEFT)*@
+    <div class="reference-layout container-fluid mb-5">
+        <div class="container-sm">
+            <div class="d-flex" style="gap: 20px;">
+                <div class="line"></div>
+                <div class="quote-text-div">
+                    <h3>
+                        This Is The Title Of A Reference
+                    </h3>
+                    <p class="subtitle" style="margin-bottom: 0;">
+                        Creator - Date
+                    </p>
+                    <p class="subtitle" style="margin-bottom: 0.5rem;">
+                        https://dsfasdfasdfalsdjfasfd.com
+                    </p>
+                    <p>
+                        This is a description of the reference's use. Itaaaaaaaaaaaaaaaaaaaaaaa was asdf asdfasdf sdfarfsd erfsd vsdf vdfv sdfgs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*REFERENCE LAYOUT (RIGHT)*@
+    <div class="reference-layout container-fluid mb-5">
+        <div class="container-sm">
+            <div class="d-flex" style="gap: 20px; justify-content: flex-end;">
+                <div class="quote-text-div text-end">
+                    <h3>
+                        This Is The Title Of A Reference
+                    </h3>
+                    <p class="subtitle" style="margin-bottom: 0;">
+                        Creator - Date
+                    </p>
+                    <p class="subtitle" style="margin-bottom: 0.5rem;">
+                        https://dsfasdfasdfalsdjfasfd.com
+                    </p>
+                    <p>
+                        This is a description of the reference's use. It was asdf asdfasdf sdfarfsd erfsd vsdf vdfv sdfgs.
+                    </p>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</div>
 
 
 @code {
