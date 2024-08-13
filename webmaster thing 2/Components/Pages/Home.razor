@@ -3,9 +3,74 @@
 <PageTitle>Home</PageTitle>
 
 <header>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1551970634-747846a548cb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="carousel-caption">
+                    <h1 class="banner_title">Home</h1>
+                    <p class="banner_subtitle">This Is A Subtitle</p>
+                </div>
+            </div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1500829243541-74b677fecc30?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="carousel-caption">
+                    <h1 class="banner_title">Home</h1>
+                    <p class="banner_subtitle">This Is A Subtitle</p>
+                </div>
+            </div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1542351366-d8d0560af4d1?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="carousel-caption">
+                    <h1 class="banner_title">Home</h1>
+                    <p class="banner_subtitle">This Is A Subtitle</p>
+                </div>
+            </div>
+        
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+
+
+@*
+<header>
     <h1 class="banner_title">Home</h1>
     <p class="banner_subtitle">This Is A Subtitle</p>
 </header>
+
+header {
+    text-align: center;
+    background-image: url(https://images.unsplash.com/photo-1551970634-747846a548cb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    color: white;
+    height: calc(100vh + 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+    will-change: transform, filter, opacity;
+}
+
+.banner_title {
+    font-size: calc(7rem + 4.5vw);
+    font-family: var(--header-font);
+    text-shadow: var(--title-text-shad);
+    overflow-wrap: break-word;
+}
+
+.banner_subtitle {
+    font-size: 2rem;
+}
+*@
 
 @*
 
@@ -60,14 +125,13 @@
 
     @*DISPLAY HEADER LAYOUT*@
     <div class="display-header-layout container-fluid mb-5">
-        <div class="container-sm text-center">
-            <h1 class="display-1">This Is A Header</h1>
+        <div class="container-sm heading-container">
+            <div class="heading-line"></div>
+            <h1 class="heading-with-lines display-1">This Is A Heading</h1>
+            <div class="heading-line"></div>
         </div>
     </div>
 
-
-    
-    
     @*LINE & PARAGRAPH LAYOUT (LEFT)*@
     <div class="quote-layout container-fluid mb-5">
         <div class="container-sm">
@@ -227,8 +291,8 @@
 
     @*BIG CARD LAYOUT*@
     <div class="big-card-layout mb-5">
-        <div style="position: relative;" class="big-card-layout-image-1">
-            <div class="individual-big-card container-sm">
+        <div class="individual-big-card container-sm">
+            <div style="position: relative;" class="big-card-layout-image-1">
                 <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 card text-center perspective-card" id="card1">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1603328206297-d59f3d0312c0?q=80&w=1830&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
                     <div class="card-body">
@@ -243,8 +307,8 @@
                 </div>
             </div>
         </div>
-        <div style="position: relative;" class="big-card-layout-image-2">
-            <div class="individual-big-card container-sm">
+        <div class="individual-big-card container-sm">
+            <div style="position: relative;" class="big-card-layout-image-2">
                 <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 offset-lg-6 offset-xl-7 offset-xxl-8 card text-center perspective-card" id="card1">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1629825974318-5bbdf3cb4efe?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
                     <div class="card-body">
@@ -259,8 +323,8 @@
                 </div>
             </div>
         </div>
+        <div class="individual-big-card container-sm">
         <div style="position: relative;" class="big-card-layout-image-3">
-            <div class="individual-big-card container-sm">
                 <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 card text-center perspective-card" id="card1">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1656951329324-f349a97c908d?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
                     <div class="card-body">
@@ -275,8 +339,8 @@
                 </div>
             </div>
         </div>
+        <div class="individual-big-card container-sm">
         <div style="position: relative;" class="big-card-layout-image-4">
-            <div class="individual-big-card container-sm">
                 <div class="col-md-12 col-lg-6 col-xl-5 col-xxl-4 offset-lg-6 offset-xl-7 offset-xxl-8 card text-center perspective-card" id="card1">
                     <img class="card-img-top" src="https://images.unsplash.com/photo-1655744434956-d5487b9a40aa?q=80&w=1766&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="this is alt text">
                     <div class="card-body">
@@ -294,8 +358,13 @@
     </div>
 
     <div style="height: 500px;" class="container-fluid">
+        <div class="container-sm">
 
+        </div>
     </div>
+
+    
+
 
     @*IMG & TEXT LAYOUT*@
     @* <div class="img-and-text-layout container-fluid">
@@ -325,6 +394,70 @@
 
         </div>
     </div>*@
+
+    @*QUOTE LAYOUT*@
+    @* <div class="quote-layout container-fluid mb-5">
+        <div class="container-sm position-relative text-center" style="position: relative;">
+            @* <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="var(--text-color-solid-very-muted)" class="bi bi-quote" viewBox="0 0 16 16">
+                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z" />
+            </svg>
+            <div class="fs-3">"Lorem ipsum blah blah blah blah yadda yadda blah blah aaaa bb cc dd ee ffff"</div>
+            <div class="fs-5 mt-3">- Somebody's Name, 2024</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="var(--text-color-solid-very-muted)" class="bi bi-quote" viewBox="0 0 16 16">
+                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z" />
+            </svg>
+        </div>
+    </div> *@
+
+    @*BIG NUMBER LAYOUT*@
+    <div class="big-number-layout container-fluid mb-5">
+        <div class="container-sm position-relative text-center">
+            <div class="giant-percentage">75%</div>
+            <div class="small-text fs-3">This percentage is the percentage of some random thing related to a topic.</div>
+        </div>
+    </div>
+
+    @*QUOTE LAYOUT (LEFT)*@
+    <div class="quote-layout container-fluid mb-5">
+        <div class="container-sm">
+            <figure class="pt-2 border-top border-bottom">
+                <blockquote class="blockquote">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    @*QUOTE LAYOUT (CENTER)*@
+    <div class="quote-layout container-fluid mb-5">
+        <div class="container-sm">
+            <figure class="text-center pt-2 border-top border-bottom">
+                <blockquote class="blockquote">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    
+    @*QUOTE LAYOUT (RIGHT)*@
+    <div class="quote-layout container-fluid mb-5">
+        <div class="container-sm">
+            <figure class="text-end pt-2 border-top border-bottom">
+                <blockquote class="blockquote">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">Source Title</cite>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
 
     @*WIDE CAROUSEL LAYOUT*@
     <div class="wide-carousel-layout container-fluid mb-5">
@@ -375,7 +508,7 @@
         <div class="container-sm">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
-                    <div id="carousel-with-text" class="carousel slide carousel-fade" data-interval="false">
+                    <div id="carousel-with-text" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carousel-with-text" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carousel-with-text" data-bs-slide-to="1" aria-label="Slide 2"></button>

@@ -1,4 +1,6 @@
-﻿//banner parallax
+﻿
+
+//banner parallax
 window.addEventListener("scroll", function () {
     const distance = window.scrollY;
 
@@ -57,40 +59,3 @@ document.querySelectorAll('.perspective-card-small').forEach(card => {
         card.style.transform = 'rotateY(0) rotateX(0)'; // Reset transform on mouse leave
     };
 });
-
-
-//big card perspective hover
-//having two at once interferes with each other for some reason
-//let constrainBig = 70;
-
-//function transforms(x, y, el) {
-//    let box = el.getBoundingClientRect();
-//    let calcX = -(y - box.top - (box.height / 2)) / constrainBig;
-//    let calcY = (x - box.left - (box.width / 2)) / constrainBig;
-
-//    return "perspective(1000px) "
-//        + "   rotateX(" + calcX + "deg) "
-//        + "   rotateY(" + calcY + "deg) ";
-//};
-
-//function transformElement(el, xyEl) {
-//    el.style.transform = transforms.apply(null, xyEl);
-//}
-
-//document.querySelectorAll('.perspective-card').forEach(card => {
-//    card.onmousemove = function (e) {
-//        let xy = [e.clientX, e.clientY];
-//        let position = xy.concat([card]);
-
-//        window.requestAnimationFrame(function () {
-//            transformElement(card, position);
-//        });
-//    };
-
-//    card.onmouseleave = function () {
-//        card.style.transform = 'rotateY(0) rotateX(0)'; // Reset transform on mouse leave
-//    };
-//});
-
-
-//carousel stuff
