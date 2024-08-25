@@ -117,29 +117,30 @@ p:last-child {
     background-position: center;
 }
 
-    #carouselExampleCaptions .carousel-item img {
-        display: none;
-    }
-
 #carouselExampleCaptions .carousel-caption {
     text-align: center;
-    position: absolute;
-    bottom: 20px;
-    
+    position: absolute;    
     color: white;
+    bottom: 0;
+    padding: 0;
 }
 
 #carouselExampleCaptions .carousel-caption h1 {
-    font-size: calc(7rem + 4.5vw);
+    font-size: calc(6.2rem + 4.5vw);
     font-family: var(--header-font);
-    text-shadow: var(--title-text-shad);
+    text-shadow: var(--tiStle-text-shad);
     overflow-wrap: break-word;
+    line-height: 1;
 }
 
-#carouselExampleCaptions .carousel-caption p {
-    font-size: 2rem;
+#carouselExampleCaptions .carousel-caption h3 {
+    /*font-size: 2rem;*/
+    text-shadow: var(--title-text-shad);
 }
 
+.highlight {
+    color: var(--accent-color);
+}
 
 
 
@@ -553,9 +554,15 @@ p:last-child {
     transition: letter-spacing 10s;
 }
 
-/*.display-header-layout h1:hover {
+display-header-layout h1:hover {
     letter-spacing: 20px;
-}*/
+}
+
+@media (min-width: 992px) {
+    display-header-layout h1:hover {
+        letter-spacing: 20px;
+    }
+}
 
 .heading-container {
     display: flex;
