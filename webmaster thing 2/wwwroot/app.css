@@ -111,6 +111,10 @@ p:last-child {
 
 
 /*BANNER*/
+header {
+    will-change: transform, filter, opacity;
+}
+
 #carouselExampleCaptions .carousel-item {
     height: 100vh;
     background-size: cover;
@@ -300,7 +304,8 @@ p:last-child {
 
 .big-card-layout-image-1,
 .big-card-layout-image-2,
-.big-card-layout-image-3 {
+.big-card-layout-image-3,
+.big-card-layout-image-4 {
     margin-bottom: 3rem;
 }
 
@@ -356,6 +361,80 @@ p:last-child {
     mask-image: radial-gradient(red, transparent 70%);
     filter: blur(8px);
 }
+
+/*main dishes*/
+
+.chickpea-curry::before {
+    background-image: url('/Images/Main Dishes/chichpea curry masala.jpg');
+}
+.aloo-gobi::before {
+    background-image: url('images/main dishes/potato and cauliflower curry (aloo gobi).jpg');
+}
+.eggplant-mash::before {
+    background-image: url('images/main dishes/eggplantn mash.jpg');
+}
+.tikka-masala::before {
+    background-image: url('images/main dishes/vegan tikka masala.jpg');
+}
+.spiced-flatbread::before {
+    background-image: url('images/main dishes/spiced flatbread.jpg');
+}
+.spinach-curry::before {
+    background-image: url('images/main dishes/spinach curry.jpg');
+}
+.sweet-and-sour-curry::before {
+    background-image: url('images/main dishes/sweet and sour curry.jpg');
+}
+.lentil-stew::before {
+    background-image: url('images/main dishes/lentil stew.jpg');
+}
+.potato-and-pea-curry::before {
+    background-image: url('images/main dishes/potato and pea curry.jpg');
+}
+.veg-biryani::before {
+    background-image: url('images/main dishes/vegetable biryani.jpg');
+}
+
+/*appetizers*/
+
+.samosas::before {
+    background-image: url('images/appetizers/vegan samosa.jpg');
+}
+.potato-puffs::before {
+    background-image: url('images/appetizers/potato puffs.jpg');
+}
+.veg-fritters::before {
+
+}
+.pot-patties::before {
+
+}
+.naan-flatbread::before {
+    background-image: url('images/appetizers/vegan flat bread (naan).jpg');
+}
+
+/*drinks*/
+
+.mango-lassi::before {
+    background-image: url('images/drinks/mango lassi.jpg');
+}
+.rose-lmnade::before {
+    background-image: url('images/drinks/rose lemonade.jpg');
+}
+.masala-tea::before {
+    background-image: url('images/drinks/spiced tea masala.jpg');
+}
+.coco-water {
+
+}
+.tamarind-juice {
+
+}
+
+
+
+
+
 
 .big-card-layout a {
     text-decoration: none;
@@ -551,18 +630,9 @@ p:last-child {
     font-family: var(--header-font);
     color: var(--text-color-solid);
     letter-spacing: 10px;
-    transition: letter-spacing 10s;
+    text-align: center;
 }
 
-display-header-layout h1:hover {
-    letter-spacing: 20px;
-}
-
-@media (min-width: 992px) {
-    display-header-layout h1:hover {
-        letter-spacing: 20px;
-    }
-}
 
 .heading-container {
     display: flex;
