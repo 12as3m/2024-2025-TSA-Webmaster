@@ -51,7 +51,8 @@ window.addEventListener('scroll', () => {
     const element = document.querySelector('.giant-container');
     if (window.scrollY > 0) {
         element.style.boxShadow = '0 0 100px hsl(0, 0%, 0%, 0.7)';
-    } else {
+    }
+    else {
         element.style.boxShadow = 'none';
     }
 });
