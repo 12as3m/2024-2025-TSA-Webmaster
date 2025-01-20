@@ -25,8 +25,8 @@
     --opaque-bg-dark: hsl(var(--accent-hue), 12%, 10%);
     --opaque-bg-2: hsl(calc(var(--accent-hue) - 40), 33%, 26%);
     /*fonts*/
-    --body-font: Trebuchet MS, system-ui, sans-serif;
-    --header-font: Bebas Neue, system-ui;
+    --body-font: Fira Sans, system-ui, sans-serif;
+    --header-font: Bebas Neue, system-ui, sans-serif;
     /*--header-font-2: Times New Roman, system-ui;*/
 }
 
@@ -101,6 +101,10 @@ p:last-child {
 
 .dropdown-menu {
     border: none !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: transparent !important;
 }
 
 .nav-link:focus-visible,
@@ -344,7 +348,7 @@ header {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(https://images.unsplash.com/photo-1603328206297-d59f3d0312c0?q=80&w=1830&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url('images/main dishes/chichpea curry masala.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -357,7 +361,7 @@ header {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(https://images.unsplash.com/photo-1629825974318-5bbdf3cb4efe?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url('images/appetizers/pakoras.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -370,7 +374,7 @@ header {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(https://images.unsplash.com/photo-1656951329324-f349a97c908d?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url('images/drinks/strawberry lemonade.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -383,7 +387,7 @@ header {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(https://images.unsplash.com/photo-1655744434956-d5487b9a40aa?q=80&w=1766&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url('images/sustainability/more crops.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -445,8 +449,8 @@ header {
 
 /*drinks*/
 
-.mango-lassi::before {
-    background-image: url('images/drinks/mango lassi.jpg');
+.straw-lemon::before {
+    background-image: url('images/drinks/strawberry lemonade.jpg');
 }
 .rose-lmnade::before {
     background-image: url('images/drinks/rose lemonade.jpg');
@@ -459,6 +463,9 @@ header {
 }
 .tamarind-juice::before {
     background-image: url('images/drinks/imli juice.jpg');
+}
+.espresso::before {
+    background-image: url('images/drinks/espresso.jpg');
 }
 
 
@@ -509,6 +516,8 @@ header {
     max-width: 100%;
     height: auto;
 }
+
+
 
 /*BIG NUMBERED LIST LAYOUT
 
@@ -664,7 +673,15 @@ header {
     color: var(--text-color-solid);
     letter-spacing: 10px;
     text-align: center;
+    transition: letter-spacing 5s ease
 }
+
+@media (min-width: 768px) {
+    .display-header-layout h1:hover {
+        letter-spacing: 15px;
+    }
+}
+
 
 
 .heading-container {

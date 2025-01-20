@@ -73,3 +73,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // Listen for popstate events to handle browser navigation (back/forward buttons)
     window.addEventListener('popstate', updateActiveLink);
 });
+
+
+
+
+
+
+
+
+// Makes footer links reload page
+
+const navLinks = document.querySelectorAll('a.nav-link:not(.dropdown-toggle)'); // "navLinks" equals each HTML element that is an <a> with the "nav-link" class.
+
+navLinks.forEach(link => { // For each "navLinks," have "link" equal them and do the below.
+    // The below says that for "link," listen for when it is clicked on, and when clicked, on execute the function that makes the window's URL equal to the link's URL.
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.location.href = link.href;
+    });
+});

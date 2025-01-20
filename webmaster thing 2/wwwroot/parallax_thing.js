@@ -57,34 +57,42 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
+
+
+
+
+
+
 //small card perspective hover
-let constrain = 15;
 
-function transforms(x, y, el) {
-    let box = el.getBoundingClientRect();
-    let calcX = -(y - box.top - (box.height / 2)) / constrain;
-    let calcY = (x - box.left - (box.width / 2)) / constrain;
+let constrain = 15; // The variable "constrain" equals 15, which is some constant meant to control the effect
 
-    return "perspective(1000px) "
-        + "   rotateX(" + calcX + "deg) "
-        + "   rotateY(" + calcY + "deg) ";
+function transforms(x, y, el) { // This is a function called "transforms" with parameters "x," "y," and "el." The function is meant to take in the cursor's horizontal and vertical positions based on the screen/viewport and the card HTML element as arguments for these parameters and return some CSS.
+    let box = el.getBoundingClientRect(); // The variable "box" equals the bounding rectangle of the "el" variable, which is supposed to be an element. This means that "box" can be used to provide various details about the bounding rectangle
+    let calcX = -(y - box.top - (box.height / 2)) / constrain; // The variable "calcX" is supposed to control the rotation of the element about the x-axis based on the cursor's vertical position. The variable is negative vertical mouse position based on screen/viewport minus the vertical position of the top edge of the element based on the screen/viewport minus half of the height of the element all divided by "constrain."
+    let calcY = (x - box.left - (box.width / 2)) / constrain; // The variable "calcX" is supposed to control the rotation of the element about the y-axis based on the cursor's horizontal position. The variable is horizontal mouse position based on screen/viewport minus the vertical position of the top edge of the element based on the screen/viewport minus half of the height of the element all divided by "constrain."
+
+    return "perspective(1000px) " + "rotateX(" + calcX + "deg) " + "rotateY(" + calcY + "deg)"; // It returns some CSS with the rotateX and rotateY properties controlled by the variables "calcX" and "calcY."
 };
 
-function transformElement(el, xyEl) {
+function transformElement(el, xyEl) { // This is a function valled "transformElement", with the parameters "el" and "xyEl." The function is meant to take in the card HTML element and some array (with cursor x and y positions and the card HTML element) as arguments for these parameters and set the element's transform CSS property to what is returned by the "transforms" function with the stuff from the array as the arguments. ".apply" allows the array things as arguments.
     el.style.transform = transforms.apply(null, xyEl);
 }
 
+// The below says that for each element in the document with the class "perspective-card-small," have "card" equal those elements and for each of them, do the below
 document.querySelectorAll('.perspective-card-small').forEach(card => {
-    card.onmousemove = function (e) {
-        let xy = [e.clientX, e.clientY];
-        let position = xy.concat([card]);
+    card.onmousemove = function (e) { // When the mouse moves do function(e). The parameter "e" is automatically defined as the card HTML element.
+        let xy = [e.clientX, e.clientY]; // Have the "xy" array equal the horizontal and vertical positions of the cursor based on the screen/viewport.
+        let position = xy.concat([card]); // Have "position" equal the "xy" array with the card HTML element added to it.
 
-        window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () { // window.requestAnimationFrame makes it so the function inside is executed before the screen is repainting, syncing the code with the browser refresh rate to make a smoother animation. The function inside just says to execute the "transforElement" function with the card HTML element and "position" as its arguments.
             transformElement(card, position);
         });
     };
 
-    card.onmouseleave = function () {
-        card.style.transform = 'rotateY(0) rotateX(0)'; // Reset transform on mouse leave
+    card.onmouseleave = function () { // When the mouse leaves the card, do the function, which sets the card's transform CSS property to what is shown.
+        card.style.transform = 'rotateY(0) rotateX(0)';
     };
 });
+
