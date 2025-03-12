@@ -1,23 +1,4 @@
-﻿//document.addEventListener("DOMContentLoaded", function () {
-//    // Get all navigation links
-//    const navLinks = document.querySelectorAll('nav a');
-
-//    // Get the current URL path and convert it to lowercase
-//    const currentPath = window.location.pathname.toLowerCase();
-
-//    navLinks.forEach(link => {
-//        // Remove the active class from all links
-//        link.classList.remove('active');
-
-//        // Get the link text content and convert it to lowercase
-//        const linkText = link.textContent.trim().toLowerCase();
-
-//        // Check if the link text is in the current URL path
-//        if (currentPath.includes(linkText)) {
-//            link.classList.add('active');
-//        }
-//    });
-//});
+﻿
 
 document.addEventListener("DOMContentLoaded", function () {
     // Select all navigation links within the <nav> element

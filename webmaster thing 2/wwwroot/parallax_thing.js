@@ -28,23 +28,6 @@ window.addEventListener("scroll", function () {
     }
 });
 
-////banner parallax
-//window.addEventListener("scroll", function () {
-//    const distance = window.scrollY;
-
-//    // Convert vh to pixels
-//    const maxScrollVh = 100; // Set the max scroll in vh units (e.g., 50vh)
-//    const maxScrollPx = (window.innerHeight * maxScrollVh) / 100;
-
-//    // Apply transformations and styles
-//    const header = document.querySelector("header");
-//    header.style.transform = `translateY(${distance * 0.7}px)`;
-//    header.style.filter = `blur(${distance * 0.03}px)`;
-
-//    // Calculate opacity based on scroll distance
-//    const opacity = Math.max(0, 1 - distance / maxScrollPx);
-//    header.style.opacity = opacity;
-//});
 
 //giant container box shadow
 window.addEventListener('scroll', () => {
@@ -96,3 +79,29 @@ document.querySelectorAll('.perspective-card-small').forEach(card => {
     };
 });
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".watch");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log(`Element ${entry.target.id} is in view!`);
+                // Call your function here
+                triggerAction(entry.target);
+
+                // Stop observing after the first trigger (optional)
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust threshold for sensitivity
+
+    elements.forEach(element => observer.observe(element));
+
+    function triggerAction(element) {
+        element.classList.add("active"); // Example action: Add a class
+    }
+});

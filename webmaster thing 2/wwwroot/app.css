@@ -28,6 +28,10 @@
     --body-font: Fira Sans, system-ui, sans-serif;
     --header-font: Bebas Neue, system-ui, sans-serif;
     /*--header-font-2: Times New Roman, system-ui;*/
+
+    --svg-innerbg: hsl(120 25% 50%);
+    --svg-outerbg: hsl(120 19% 21% / 1);
+    --svg-lines: hsl(0 0% 100%);
 }
 
 html {
@@ -115,6 +119,39 @@ a:focus-visible {
     outline: 0;
 }
 
+.navbar-collapse:not(.show) .dropdown-menu.show {
+    background-color: var(--opaque-bg);
+    border-radius: var(--glassy-border-radius);
+    box-shadow: var(--elev-shad_glassy);
+    animation: go-in 0.2s;
+    transform-origin: top;
+    padding: 0.5rem 0
+}
+
+@keyframes go-in {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.navbar-collapse .dropdown-menu.show {
+    animation: fade-in 0.6s;
+    transform-origin: top;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 /*BANNER*/
 header {
@@ -136,7 +173,7 @@ header {
 }
 
 #carouselExampleCaptions .carousel-caption h1 {
-    font-size: calc(6.2rem + 4.5vw);
+    font-size: calc(2.2rem + 4.5vw);
     font-family: var(--header-font);
     text-shadow: var(--title-text-shad-2);
     overflow-wrap: break-word;
@@ -149,6 +186,18 @@ header {
 
 .highlight {
     color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+    #carouselExampleCaptions .carousel-caption h1 {
+        font-size: calc(4.2rem + 4.5vw);
+    }
+}
+
+@media (min-width: 992px) {
+    #carouselExampleCaptions .carousel-caption h1 {
+        font-size: calc(6.2rem + 4.5vw);
+    }
 }
 
 
@@ -222,10 +271,6 @@ header {
 }
 
 /*SMALL CARD LAYOUT*/
-
-/*.perspective-container {
-    perspective: 1000px;
-}*/
 
 .card-icon {
     font-size: 3rem;
@@ -468,10 +513,7 @@ header {
     background-image: url('images/drinks/espresso.jpg');
 }
 
-
-
-
-
+/*links*/
 
 .big-card-layout a,
 .big-card-layout a:hover,
@@ -496,16 +538,20 @@ header {
     width: 100%;
 }
 
+/*remove perspective for cards on tablets and phones*/
 
-/*IMG & TEXT LAYOUT*//*
-
-.img-and-text-layout {
-    color: var(--text-color-solid);
+@media (max-width: 991.98px) {
+    .perspective-card-small {
+        transform: none !important;
+    }
+    .big-card-layout div .card:hover {
+        transform: none !important;
+        background-color: var(--glassy-bg) !important;
+        box-shadow: var(--elev-shad_glassy);
+    }
 }
 
-.img-and-text-layout p {
-    margin-bottom: 0;
-}*/
+
 
 
 
@@ -677,7 +723,7 @@ header {
 }
 
 @media (min-width: 768px) {
-    .display-header-layout h1:hover {
+    .display-header-layout:hover h1 {
         letter-spacing: 15px;
     }
 }
