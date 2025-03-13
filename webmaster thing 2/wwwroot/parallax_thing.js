@@ -86,22 +86,25 @@ document.querySelectorAll('.perspective-card-small').forEach(card => {
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll(".watch");
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                console.log(`Element ${entry.target.id} is in view!`);
-                // Call your function here
-                triggerAction(entry.target);
-
-                // Stop observing after the first trigger (optional)
-                observer.unobserve(entry.target);
+            if (entry.intersectionRatio >= 0.5) { // Only fade in when 75% is visible
+                fadeIn(entry.target);
+            } else if (entry.intersectionRatio === 0) { // Only fade out when fully out of view
+                fadeOut(entry.target);
             }
         });
-    }, { threshold: 0.5 }); // Adjust threshold for sensitivity
+    }, { threshold: [0, 0.5] }); // Tracks when fully out (0) and mostly in (0.75)
 
     elements.forEach(element => observer.observe(element));
 
-    function triggerAction(element) {
-        element.classList.add("active"); // Example action: Add a class
+    function fadeIn(element) {
+        element.classList.add("fade-in");
+    }
+
+    function fadeOut(element) {
+        element.classList.remove("fade-in"); // Remove effect only when fully out
     }
 });
+
+
