@@ -88,13 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio >= 0.5) { // Only fade in when 75% is visible
+            if (entry.isIntersecting) {
                 fadeIn(entry.target);
-            } else if (entry.intersectionRatio === 0) { // Only fade out when fully out of view
+            } else if (entry.intersectionRatio === 0) {
                 fadeOut(entry.target);
             }
         });
-    }, { threshold: [0, 0.5] }); // Tracks when fully out (0) and mostly in (0.75)
+    }, { threshold: [0, 0.9], rootMargin: "10px 0px" });
 
     elements.forEach(element => observer.observe(element));
 
@@ -103,8 +103,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fadeOut(element) {
-        element.classList.remove("fade-in"); // Remove effect only when fully out
+        element.classList.remove("fade-in");
     }
 });
+
+//old:
+//document.addEventListener("DOMContentLoaded", function () {
+//    const elements = document.querySelectorAll(".watch");
+
+//    const observer = new IntersectionObserver((entries) => {
+//        entries.forEach(entry => {
+//            if (entry.intersectionRatio >= 0.5) {
+//                fadeIn(entry.target);
+//            } else if (entry.intersectionRatio === 0) {
+//                fadeOut(entry.target);
+//            }
+//        });
+//    }, { threshold: [0, 0.5] });
+
+//    elements.forEach(element => observer.observe(element));
+
+//    function fadeIn(element) {
+//        element.classList.add("fade-in");
+//    }
+
+//    function fadeOut(element) {
+//        element.classList.remove("fade-in");
+//    }
+//});
 
 

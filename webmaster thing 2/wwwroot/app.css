@@ -156,6 +156,7 @@ a:focus-visible {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform
 }
 
 .fade-in {
@@ -198,17 +199,27 @@ header {
     color: var(--accent-color);
 }
 
+.banner-button {
+    border: 2px solid white;
+    color: white;
+    padding: calc(0.3rem + 0.8vw) calc(0.7rem + 2.6vw);
+    background: none;
+}
+
 @media (min-width: 768px) {
     #carouselExampleCaptions .carousel-caption h1 {
         font-size: calc(4.2rem + 4.5vw);
     }
+
 }
 
 @media (min-width: 992px) {
     #carouselExampleCaptions .carousel-caption h1 {
         font-size: calc(6.2rem + 4.5vw);
     }
+
 }
+
 
 
 
@@ -369,7 +380,7 @@ header {
     transform: perspective(1000px) rotateY(-10deg);
 }
 
-.big-card-layout .card-body {
+.card-body {
     border-top: 1px solid var(--glassy-border-color);
 }
 
@@ -379,7 +390,7 @@ header {
     object-fit: cover;
 }
 
-.big-card-layout .card-footer {
+.card-footer {
     border-top: 1px solid var(--glassy-border-color) !important;
     width: 100%;
 }
@@ -561,6 +572,39 @@ header {
         box-shadow: var(--elev-shad_glassy);
     }
 }
+
+
+
+
+
+
+/*GRID CARD LAYOUT */
+
+.grid-card-layout a,
+.grid-card-layout a:hover,
+.grid-card-layout a:focus {
+    text-decoration: none !important;
+    position: relative;
+    color: var(--accent-color) !important;
+    filter: none !important;
+}
+
+.grid-card-layout a::before {
+    content: "";
+    background-color: currentColor;
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    top: 100%;
+    transition: 0.2s ease;
+}
+
+.grid-card-layout a:hover::before {
+    width: 100%;
+}
+
+
+
 
 
 
